@@ -20,7 +20,7 @@ export default function RootLayout({
         <body
           className={cn(
             "bg-background min-h-screen font-sans antialiased",
-            Inter.variable
+            Inter.className
           )}
         >
           <ThemeProvider
@@ -30,10 +30,7 @@ export default function RootLayout({
             disableTransitionOnChange
             storageKey="theme"
           >
-            {/* <AuthProvider session={{} as Session}> */}
-            {/* <Navbar /> */}
             {children}
-            {/* </AuthProvider> */}
           </ThemeProvider>
         </body>
       </html>

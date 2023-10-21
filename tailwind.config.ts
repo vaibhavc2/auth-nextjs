@@ -1,7 +1,5 @@
 import type { Config } from "tailwindcss";
 
-import { fontFamily } from "tailwindcss/defaultTheme";
-
 const config: Config = {
   darkMode: "class",
   content: [
@@ -11,10 +9,6 @@ const config: Config = {
     "./src/**/*.{ts,tsx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
-  fontFamily: {
-    sans: ["var(--inter)", ...fontFamily.sans],
-    serif: ["var(--poppins)", ...fontFamily.sans]
-  },
   theme: {
     container: {
       center: true,
