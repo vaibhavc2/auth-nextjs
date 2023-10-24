@@ -1,6 +1,6 @@
 import { printErrorMessage } from "@/lib/utils";
 import mongoose from "mongoose";
-import EnvVariables from "../env/config";
+import { EnvVariables } from "../env";
 
 const { MONGO_URI } = EnvVariables;
 

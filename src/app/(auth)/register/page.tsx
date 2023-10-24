@@ -17,6 +17,7 @@ import { Poppins } from "@/fonts";
 import { useForm } from "react-hook-form";
 
 import { SignupFormSchema } from "@/models";
+import { useEffect, useState } from "react";
 
 type FormInput = z.infer<typeof SignupFormSchema>;
 
@@ -29,6 +30,25 @@ export default function Register() {
       password: ""
     }
   });
+
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+
+  // const router = useRouter();
+
+  useEffect(
+    // useCallback(() => {
+    () => {
+      if (
+        form.formState.dirtyFields.username &&
+        form.formState.dirtyFields.email &&
+        form.formState.dirtyFields.password
+      ) {
+        setButtonDisabled(false);
+      } else setButtonDisabled(true);
+    },
+    // }, [buttonDisabled, setButtonDisabled, form.formState.dirtyFields]),
+    [form.formState.isDirty === true]
+  );
 
   function onSubmit(values: FormInput) {
     console.log(values);
@@ -89,7 +109,7 @@ export default function Register() {
           />
 
           <div className="!my-8 flex justify-center">
-            <Button type="submit" className="px-10">
+            <Button type="submit" className="px-10" disabled={buttonDisabled}>
               Submit
             </Button>
           </div>
