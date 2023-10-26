@@ -7,7 +7,6 @@ import { NextRequest, NextResponse } from "next/server";
 connectDB();
 
 export async function POST(request: NextRequest) {
-  // const { HASH_SECRET } = EnvVariables;
   try {
     const reqBody = await request.json();
     const { username, email, password } = reqBody;

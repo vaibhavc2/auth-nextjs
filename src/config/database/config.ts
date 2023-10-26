@@ -1,8 +1,6 @@
 import { printErrorMessage } from "@/lib/utils";
 import mongoose from "mongoose";
-import { EnvVariables } from "../env";
-
-const { MONGO_URI } = EnvVariables;
+import { MONGO_URI } from "../env";
 
 export async function connectDB() {
   try {

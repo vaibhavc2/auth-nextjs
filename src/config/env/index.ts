@@ -1,3 +1,3 @@
-import EnvVariables from "./config";
+import { sanitizedConfig } from "./config";
 
-export { EnvVariables };
+export const { DOMAIN, HASH_SECRET, MONGO_URI, TOKEN_SECRET } = sanitizedConfig;

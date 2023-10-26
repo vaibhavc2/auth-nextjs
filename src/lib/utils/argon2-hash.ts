@@ -1,8 +1,6 @@
-// import { EnvVariables } from "@/config/env";
+// import { HASH_SECRET } from "@/config/env";
 // import * as argon2 from "argon2";
 // import { getErrorMessage } from ".";
-
-// const { HASH_SECRET } = EnvVariables;
 
 // export const hashPassword = async (password: string) => {
 //   try {
